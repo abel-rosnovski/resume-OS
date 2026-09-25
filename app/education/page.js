@@ -1,10 +1,9 @@
-export default function EducationPage() {
+import PageShell from "../../components/PageShell";
+
+export default function educationPage() {
   return (
-    <main className="min-h-screen bg-black text-white flex items-center justify-center px-6">
-      <div className="text-center text-gray-300">
-        <p className="font-semibold text-xl">[Degree], [Institution]</p>
-        <p className="text-sm text-gray-500 mt-2">[Years]</p>
-      </div>
-    </main>
+    <PageShell>
+      <h1 className="text-3xl font-bold">Education — content coming soon</h1>
+    </PageShell>
   );
 }

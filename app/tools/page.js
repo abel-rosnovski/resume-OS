@@ -1,7 +1,9 @@
+import PageShell from "../../components/PageShell";
+
 export default function ToolsPage() {
   return (
-    <main className="min-h-screen bg-black text-white flex items-center justify-center">
+    <PageShell>
       <h1 className="text-3xl font-bold">Tools — content coming soon</h1>
-    </main>
+    </PageShell>
   );
 }

@@ -2,6 +2,11 @@
 
 import { useState, useRef } from "react";
 import { useRouter } from "next/navigation";
+import SectionHeading from "./ui/SectionHeading";
+// ...
+<SectionHeading className="text-center justify-center">
+  What I have pulled off so far
+</SectionHeading>
 
 // The words on the wheel, and the page each one links to
 const ITEMS = [
@@ -59,7 +64,7 @@ export default function RotatingCircle() {
         </h2>
         <button
           onClick={() => router.push("/summary")}
-          className="absolute top-0 right-0 px-5 py-2 rounded-full border-2 border-white text-sm font-bold hover:bg-white hover:text-black transition-colors"
+          className="absolute top-0 right-0 px-5 py-2 rounded-full border-2 border-accent text-sm font-bold hover:bg-accent hover:text-background transition-colors"
         >
           Summary
         </button>
@@ -83,7 +88,7 @@ export default function RotatingCircle() {
             <button
               key={item.slug}
               onClick={() => handleWordClick(baseAngles[i], item.slug)}
-              className="absolute font-semibold text-sm md:text-base hover:text-yellow-400 transition-colors cursor-pointer select-none"
+              className="absolute font-semibold text-sm md:text-base hover:text-accent transition-colors cursor-pointer select-none"
               style={{
                 left: RADIUS + x,
                 top: CONTAINER_HEIGHT - RADIUS + y,
@@ -101,13 +106,13 @@ export default function RotatingCircle() {
       <div className="flex justify-center gap-6 mt-6">
         <button
           onClick={() => rotateStep(-1)}
-          className="px-4 py-2 border border-gray-600 rounded-full hover:border-white"
+          className="px-4 py-2 border border-border rounded-full hover:border-accent"
         >
           ← 
         </button>
         <button
           onClick={() => rotateStep(1)}
-          className="px-4 py-2 border border-gray-600 rounded-full hover:border-white"
+          className="px-4 py-2 border border-border rounded-full hover:border-accent"
         >
           →
         </button>
