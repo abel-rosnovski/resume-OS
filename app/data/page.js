@@ -10,6 +10,7 @@ export default function DataPage() {
         <SectionHeading className="mb-8">Data</SectionHeading>
 
         <ProjectCase
+        gradient
           title="Automated Dashboard at an MNC"
           whatIDid={[
             {
@@ -30,6 +31,7 @@ export default function DataPage() {
         />
 
         <ProjectCase
+        gradient
           title="Data Cleaning Tool for a Startup"
           whatIDid={[
             {

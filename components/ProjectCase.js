@@ -3,11 +3,18 @@
 import { useState } from "react";
 import Card from "./ui/Card";
 
-export default function ProjectCase({ title, whatIDid, whatItAccomplished }) {
+export default function ProjectCase({ title, whatIDid, whatItAccomplished, gradient }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <Card className="mb-6">
+    <Card
+  className="mb-6"
+  style={
+    gradient
+      ? { background: "linear-gradient(135deg, #10261a 0%, #0a0a0a 70%)" }
+      : undefined
+  }
+>
       <button
         onClick={() => setOpen(!open)}
         className="w-full flex items-center justify-between text-left"

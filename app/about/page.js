@@ -28,7 +28,7 @@ export default function AboutPage() {
               text: "I aspire to be the person people bring in when the stakes are high.",
             },
           ]}
-          closingQuote=" I Understand tech, talk business, execute strategy."
+          
         />
       </div>
     </PageShell>
