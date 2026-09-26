@@ -3,6 +3,7 @@
 import { useState, useRef } from "react";
 import { useRouter } from "next/navigation";
 import SectionHeading from "./ui/SectionHeading";
+import PlanetGlow from "./PlanetGlow";
 // ...
 <SectionHeading className="text-center justify-center">
   What I have pulled off so far
@@ -78,6 +79,7 @@ export default function RotatingCircle() {
         onPointerUp={handlePointerUp}
         onPointerLeave={handlePointerUp}
       >
+                <PlanetGlow rotation={rotation} />
         {ITEMS.map((item, i) => {
           const angleDeg = baseAngles[i] + rotation;
           const angleRad = (angleDeg * Math.PI) / 180;

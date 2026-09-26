@@ -30,3 +30,20 @@ body {
   background: var(--accent);
   color: var(--background);
 }
+
+@keyframes spin-texture {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 -300px;
+  }
+}
+@keyframes band-drift {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 300px 0;
+  }
+}

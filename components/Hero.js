@@ -11,7 +11,7 @@ export default function Hero() {
           <span className="text-accent">{"}"}</span>
         </h1>
         <p className="mt-6 text-base md:text-lg text-muted">
-          Growth, Data, Automation, and Product aren supposed to work together...in sync. And
+          Growth, Data, Automation, and Product are supposed to work together...in sync. And
           that&apos;s where I come in. I&apos;m a generalist by design.
         </p>
       </div>
