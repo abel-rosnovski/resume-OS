@@ -1,12 +1,21 @@
 import PageShell from "../../components/PageShell";
 import SectionHeading from "../../components/ui/SectionHeading";
 import AboutBento from "../../components/AboutBento";
+import Image from "next/image";
 
 export default function AboutPage() {
   return (
     <PageShell align="top">
       <div className="w-full">
         <SectionHeading className="mb-8">About Me</SectionHeading>
+        <div className="relative w-full max-w-2xl aspect-video rounded-lg overflow-hidden mb-10">
+  <Image
+    src="/images/silhouette-working.jpg"
+    alt="Working late"
+    fill
+    className="object-cover grayscale"
+  />
+</div>
 
         <AboutBento
           points={[

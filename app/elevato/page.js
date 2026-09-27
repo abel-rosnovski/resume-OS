@@ -2,6 +2,7 @@ import PageShell from "../../components/PageShell";
 import SectionHeading from "../../components/ui/SectionHeading";
 import Card from "../../components/ui/Card";
 import PipelineDiagram from "../../components/PipelineDiagram";
+import OtherWorksGallery from "../../components/OtherWorksGallery";
 
 export default function ElevatoPage() {
   return (
@@ -52,6 +53,16 @@ export default function ElevatoPage() {
           steps={["Ascend", "Aware", "Engage", "Subscribe", "Convert", "Excite"]}
         />
       </div>
+              <h2 className="font-display text-2xl md:text-3xl mt-14 mb-6">
+          Campaign Content
+        </h2>
+        <OtherWorksGallery
+          items={[
+            { label: "Subway Ad Concept", image: "/images/elevato-subway.jpg" },
+            { label: "Launch Campaign Poster", image: "/images/elevato-poster-1.jpg" },
+            { label: "Product Drop Poster", image: "/images/elevato-poster-2.jpg" },
+          ]}
+        />
     </PageShell>
   );
 }

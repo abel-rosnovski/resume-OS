@@ -13,11 +13,11 @@ export default function ToolSimCard({ title, description, href, inProgress }) {
       <div className="w-8 h-6 rounded-sm bg-accent/30 border border-accent/60" />
 
       <div>
-        <p className="font-bold text-sm md:text-base text-foreground">{title}</p>
+        <p className="font-bold text-sm md:text-base text-white">{title}</p>
         {description && (
-          <p className="text-muted text-xs md:text-sm mt-1 leading-snug">
-            {description}
-          </p>
+          <p className="text-gray-300 text-xs md:text-sm mt-1 leading-snug">
+  {description}
+</p>
         )}
       </div>
 

@@ -6,14 +6,18 @@ export default function OtherWorksGallery({ items }) {
           key={i}
           className="border border-border rounded-lg overflow-hidden hover:border-accent transition-colors"
         >
-          <div className="aspect-video bg-black/40 flex items-center justify-center text-muted text-sm">
-            {item.image ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img src={item.image} alt={item.label} className="w-full h-full object-cover" />
-            ) : (
+          {item.image ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              src={item.image}
+              alt={item.label}
+              className="w-full h-auto object-cover"
+            />
+          ) : (
+            <div className="aspect-video bg-black/40 flex items-center justify-center text-muted text-sm">
               <span>[image placeholder]</span>
-            )}
-          </div>
+            </div>
+          )}
           <p className="text-sm text-center py-2 text-muted">{item.label}</p>
         </div>
       ))}

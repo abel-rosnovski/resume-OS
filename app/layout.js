@@ -1,9 +1,15 @@
-import { JetBrains_Mono } from "next/font/google";
+import { JetBrains_Mono, Archivo_Black } from "next/font/google";
 import "./globals.css";
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
+});
+
+const archivoBlack = Archivo_Black({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-display",
 });
 
 export const metadata = {
@@ -13,7 +19,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={jetbrainsMono.variable}>
+    <html lang="en" className={`${jetbrainsMono.variable} ${archivoBlack.variable}`}>
       <body className="font-mono bg-background text-foreground">
         {children}
       </body>
