@@ -50,13 +50,14 @@ export default function DataPage() {
         />
 
         <SectionHeading className="mt-10 mb-4">Other Works</SectionHeading>
-        <OtherWorksGallery
-          items={[
-            { label: "Google Ads Dashboard" },
-            { label: "IPL Batters Dashboard" },
-            { label: "Delivery Time Dashboard" },
-          ]}
-        />
+<OtherWorksGallery
+  items={[
+    { label: "Delivery Time Dashboard", image: "/images/AB.png" },
+    { label: "IPL Batters Dashboard", image: "/images/CD.png" },
+    { label: "IPL Batters Dashboard", image: "/images/EF.png" },
+    { label: "Google Ads Dashboard", image: "/images/GH.png" },
+  ]}
+/>
       </div>
     </PageShell>
   );

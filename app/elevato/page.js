@@ -9,20 +9,10 @@ export default function ElevatoPage() {
       <div className="w-full">
         <SectionHeading className="mb-6">Elevato</SectionHeading>
 
-        <p className="text-foreground leading-relaxed">
-          Elevato is my biggest brag because it is where I got the opportunity to make the biggest difference.
-          
-        </p>
+       <p className="text-foreground leading-relaxed mb-8">
+  Elevato is my biggest brag because it is where I got the opportunity to make the biggest difference.
+</p>
 
-        <Card className="mb-12 max-w-3xl">
-          <p className="text-foreground leading-relaxed">
-            <span className="text-accent font-bold">Context: </span>
-            Elevato is my father&apos;s D2C e-commerce company, selling elevator shoes.
-            I pitched to lead growth for the company — on an unusually small budget,
-            which meant every decision had to earn its place. That pitch led to a
-            full relaunch.
-          </p>
-        </Card>
 
         <SectionHeading className="mb-4">What I Did</SectionHeading>
         <ul className="space-y-3 text-foreground mb-12 max-w-3xl">
