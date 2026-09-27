@@ -18,7 +18,7 @@ export default function InfoLinks() {
           <button
             key={item.slug}
             onClick={() => router.push(`/${item.slug}`)}
-            className="border-2 border-white rounded-2xl py-10 px-6 text-center font-bold hover:bg-white hover:text-black transition-colors"
+            className="border border-border rounded-2xl py-10 px-6 text-center font-bold bg-white/5 backdrop-blur-md hover:border-accent hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(57,255,140,0.15)] transition-all duration-300"
           >
             {item.label}
           </button>

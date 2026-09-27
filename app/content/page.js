@@ -11,12 +11,12 @@ export default function ContentPage() {
 
         <p className="text-muted text-sm mb-4">Instagram Posts</p>
         <OtherWorksGallery
-          items={[
-            { label: "Post 1" },
-            { label: "Post 2" },
-            { label: "Post 3" },
-          ]}
-        />
+  items={[
+    { label: "Subway Ad Concept", image: "/images/elevato-subway.jpg" },
+    { label: "Launch Campaign Poster", image: "/images/elevato-poster-1.jpg" },
+    { label: "Product Drop Poster", image: "/images/elevato-poster-2.jpg" },
+  ]}
+/>
 
         <SectionHeading className="mt-14 mb-4">Medium Articles</SectionHeading>
         <LinkList
