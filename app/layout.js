@@ -7,8 +7,16 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata = {
-  title: "Sourav B — Resume OS",
-  description: "Interactive resume by Sourav B",
+  metadataBase: new URL("https://resume-os-nine.vercel.app"),
+  title: "Sourav B — Interactive Resume",
+  description:
+    "A generalist across growth, data, automation and product. Explore what I've built, from an AI content agent to a 60% CAC reduction at Elevato.",
+  openGraph: {
+    title: "Sourav B — Interactive Resume",
+    description:
+      "A generalist across growth, data, automation and product. Explore what I've built.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({ children }) {
