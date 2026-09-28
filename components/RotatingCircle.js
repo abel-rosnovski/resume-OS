@@ -59,13 +59,13 @@ export default function RotatingCircle() {
 
   return (
     <section className="py-24 px-6">
-            <div className="relative max-w-4xl mx-auto mb-16">
+                  <div className="relative max-w-4xl mx-auto mb-16 flex flex-col items-center gap-4 lg:block">
         <h2 className="text-center text-2xl md:text-3xl font-bold">
           What I have pulled off so far
         </h2>
         <button
           onClick={() => router.push("/summary")}
-          className="absolute top-0 right-0 px-5 py-2 rounded-full border-2 border-accent text-sm font-bold hover:bg-accent hover:text-background transition-colors"
+          className="px-5 py-2 rounded-full border-2 border-accent text-sm font-bold hover:bg-accent hover:text-background transition-colors lg:absolute lg:top-0 lg:right-0"
         >
           Summary
         </button>

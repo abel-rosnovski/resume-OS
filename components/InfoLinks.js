@@ -6,6 +6,7 @@ const LINKS = [
   { label: "What you should know about me", slug: "about" },
   { label: "Education", slug: "education" },
   { label: "Work Experience", slug: "experience" },
+  { label: "Contact Me", slug: "contact" },
 ];
 
 export default function InfoLinks() {
@@ -13,7 +14,7 @@ export default function InfoLinks() {
 
   return (
     <section className="px-6 py-16">
-      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
         {LINKS.map((item) => (
           <button
             key={item.slug}
