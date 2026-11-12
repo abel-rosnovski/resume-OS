@@ -14,20 +14,24 @@ export const person = {
   status: "Open to early-stage growth roles",
 };
 
-// The 3D avatar. Leave a value null and a soft placeholder shows instead.
-// video: one continuous 10 s orbit, 24 fps, 1280×720, H.264, plain #fafaf8 studio backdrop.
+// The 3D avatar: one image per scroll stop, dissolving as you scroll. Pure-white backgrounds.
+// tx = where the figure's centre sits across the screen (0–1); fx = the figure's centre within the image (0–1).
+// Anchor each image with top or bottom; h is its height.
 export const avatar = {
-  video: null, // e.g. "/media/avatar-orbit.mp4"
-  frames: 241,
-  fps: 24,
-  stillClose: null, // phones and reduced motion, e.g. "/media/avatar-close.jpg"
-  stillFull: null, // e.g. "/media/avatar-full.jpg"
+  poses: [
+    { key: "front", src: "/media/avatar-front.jpg", tx: 0.48, fx: 0.5, bottom: "-1svh", h: "min(100svh, 54vw)" }, // hero
+    { key: "profile", src: "/media/avatar-profile.jpg", tx: 0.79, fx: 0.52, top: "9svh", h: "100svh" }, // 01 brief
+    { key: "back", src: "/media/avatar-back.jpg", tx: 0.79, fx: 0.505, top: "9svh", h: "100svh" }, // 02 build
+    { key: "full", src: "/media/avatar-full.jpg", tx: 0.79, fx: 0.5, top: "9svh", h: "90svh" }, // 03 result
+  ],
+  width: 1672,
+  height: 941,
 };
 
-export const heroMetric = {
-  value: "−60%",
-  label: "CAC in month one — Elevato",
-  more: [
+export const heroStats = {
+  kicker: "At Elevato",
+  items: [
+    { value: "−60%", label: "CAC in month one" },
     { value: "3×", label: "Sales, quarter on quarter" },
     { value: "+329%", label: "Traffic from AI search" },
   ],
@@ -47,14 +51,12 @@ export const elevato = {
       tab: "Build",
       title: ["I built", "the whole machine."],
       list: [
-        "Redesigned the whole website from scratch on Claude's free Sonnet model",
-        "SEO, GEO and agent-ready pages that grew traffic from LLM referrals",
-        "Rebuilt GA4 tracking end to end",
-        "Ran the full social media presence and content strategy",
-        "Automated email outreach and the founder's personal content",
-        "A growth engine built on one framework:",
+        "Website rebuilt from scratch on Claude's free Sonnet model",
+        "SEO, GEO and agent-ready pages for LLM traffic",
+        "GA4 tracking rebuilt end to end",
+        "Full social media and content strategy",
+        "Automated email outreach and founder content",
       ],
-      framework: ["Ascend", "Aware", "Engage", "Subscribe", "Convert", "Excite"],
     },
     {
       n: "03",

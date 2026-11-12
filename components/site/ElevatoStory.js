@@ -1,4 +1,5 @@
-import { elevato } from "../../content/resume";
+import Image from "next/image";
+import { avatar, elevato } from "../../content/resume";
 
 export default function ElevatoStory() {
   const [brief, build, result] = elevato.panels;
@@ -33,19 +34,7 @@ export default function ElevatoStory() {
             {build.list.map((item, i) => (
               <li key={item}>
                 <span className="label mute">{String(i + 1).padStart(2, "0")}</span>
-                <span>
-                  {item}
-                  {i === build.list.length - 1 ? (
-                    <span className="framework label">
-                      {build.framework.map((f, k) => (
-                        <span key={f}>
-                          {k ? <i aria-hidden="true">→</i> : null}
-                          {f}
-                        </span>
-                      ))}
-                    </span>
-                  ) : null}
-                </span>
+                <span>{item}</span>
               </li>
             ))}
           </ol>
@@ -67,6 +56,9 @@ export default function ElevatoStory() {
           </div>
         </article>
         </div>
+
+        {/* phones and reduced motion */}
+        <Image className="story-still" src={avatar.poses[3].src} alt="" width={avatar.width} height={avatar.height} sizes="100vw" aria-hidden="true" />
 
         <div className="tabs label" aria-hidden="true">
           {elevato.panels.map((p) => (

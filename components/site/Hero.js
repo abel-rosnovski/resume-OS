@@ -1,18 +1,13 @@
 import Image from "next/image";
-import { avatar, heroMetric, person } from "../../content/resume";
+import { avatar, heroStats, person } from "../../content/resume";
 
 export default function Hero() {
   const letters = [...person.wordmark];
+  const front = avatar.poses[0];
   return (
     <header className="hero" id="top">
-      {/* phones and reduced motion: a still instead of the scroll-scrubbed scene */}
-      <div className="ph ph-static" aria-hidden="true">
-        {avatar.stillClose ? (
-          <Image src={avatar.stillClose} alt="" fill sizes="70vw" style={{ objectFit: "cover" }} priority />
-        ) : (
-          <span>3D AVATAR</span>
-        )}
-      </div>
+      {/* phones and reduced motion: a still instead of the scroll-driven scene */}
+      <Image className="hero-still" src={front.src} alt="" width={avatar.width} height={avatar.height} sizes="160vw" aria-hidden="true" />
 
       <p className="hero-pitch fade" style={{ "--d": "850ms" }}>
         {person.pitch}
@@ -20,10 +15,9 @@ export default function Hero() {
       </p>
 
       <div className="hero-metric fade" style={{ "--d": "950ms" }}>
-        <b>{heroMetric.value}</b>
-        <span className="label mute">{heroMetric.label}</span>
+        <span className="label mute">{heroStats.kicker}</span>
         <dl className="hero-more">
-          {heroMetric.more.map((m) => (
+          {heroStats.items.map((m) => (
             <div key={m.label}>
               <dt className="label mute">{m.label}</dt>
               <dd>{m.value}</dd>
