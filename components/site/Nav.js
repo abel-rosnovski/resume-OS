@@ -28,7 +28,7 @@ export default function Nav() {
         <span className="nav-center mute">{person.pillars}</span>
         <span className="nav-right">
           {person.cv ? (
-            <a href={person.cv} className="link-line hide-sm" download>
+            <a href={person.cv} className="link-line" download>
               CV ↓
             </a>
           ) : null}

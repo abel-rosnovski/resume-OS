@@ -5,9 +5,8 @@ export const person = {
   wordmark: "SOURAV",
   email: "13souravb@gmail.com",
   linkedin: "https://www.linkedin.com/in/sourav-b-rosnovski/",
-  // Drop your PDF into /public (e.g. /public/Sourav-B-CV.pdf) and set the path here.
-  // While this is null, every "CV" link is hidden.
-  cv: null,
+  // The PDF in /public. Set to null to hide every "CV" link.
+  cv: "/Sourav-B-CV.pdf",
   pillars: "Growth — Data — Automation — Product",
   pitch: "I build growth engines from zero.",
   pitchDetail: "Acquisition · Tracking · Automation",
