@@ -1,30 +1,28 @@
-import Hero from "../components/Hero";
-import RotatingCircle from "../components/RotatingCircle";
-import BiggestBrag from "../components/BiggestBrag";
-import InfoLinks from "../components/InfoLinks";
-import MatrixRain from "../components/MatrixRain";
-import Reveal from "../components/Reveal";
-import CustomCursor from "../components/CustomCursor";
+import Nav from "../components/site/Nav";
+import Stage from "../components/site/Stage";
+import Hero from "../components/site/Hero";
+import ElevatoStory from "../components/site/ElevatoStory";
+import Toolkit from "../components/site/Toolkit";
+import IndexSection from "../components/site/IndexSection";
+import Notes from "../components/site/Notes";
+import Footer from "../components/site/Footer";
+import Motion from "../components/site/Motion";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background text-foreground relative cursor-none md:cursor-none">
-      <CustomCursor />
-      <MatrixRain />
-      <div className="relative z-10">
-        <Reveal>
+    <>
+      <Nav />
+      <main>
+        <Stage>
           <Hero />
-        </Reveal>
-        <Reveal delay={100}>
-          <RotatingCircle />
-        </Reveal>
-        <Reveal>
-          <BiggestBrag />
-        </Reveal>
-        <Reveal>
-          <InfoLinks />
-        </Reveal>
-      </div>
-    </main>
+          <ElevatoStory />
+        </Stage>
+        <Toolkit />
+        <IndexSection />
+        <Notes />
+      </main>
+      <Footer />
+      <Motion />
+    </>
   );
 }
