@@ -15,7 +15,7 @@ export const person = {
 };
 
 // The 3D avatar. Leave a value null and a soft placeholder shows instead.
-// video: one continuous 10 s orbit, 24 fps, 1280×720, H.264, plain #f7f6f3 studio backdrop.
+// video: one continuous 10 s orbit, 24 fps, 1280×720, H.264, plain #fafaf8 studio backdrop.
 export const avatar = {
   video: null, // e.g. "/media/avatar-orbit.mp4"
   frames: 241,
@@ -27,6 +27,10 @@ export const avatar = {
 export const heroMetric = {
   value: "−60%",
   label: "CAC in month one — Elevato",
+  more: [
+    { value: "3×", label: "Sales, quarter on quarter" },
+    { value: "+329%", label: "Traffic from AI search" },
+  ],
 };
 
 export const elevato = {
@@ -35,20 +39,22 @@ export const elevato = {
     {
       n: "01",
       tab: "Brief",
-      title: ["A shoe brand.", "No growth engine."],
-      body: "Elevato sells shoes that add height. It was relaunching with no site worth ranking, no reliable tracking and no funnel. I was brought in to build growth from zero.",
+      title: ["One growth hire.", "Every lever."],
+      body: "I joined Elevato, a D2C brand of height-increasing shoes, as its Growth Hacker for the relaunch. I owned acquisition, tracking, content and automation end to end.",
     },
     {
       n: "02",
       tab: "Build",
       title: ["I built", "the whole machine."],
       list: [
-        "A new website, built with Claude",
-        "SEO, GEO and agent-ready pages",
-        "GA4 tracking rebuilt end to end",
-        "Automated email outreach in Brevo",
-        "All social, content and launch creative",
+        "Redesigned the whole website from scratch on Claude's free Sonnet model",
+        "SEO, GEO and agent-ready pages that grew traffic from LLM referrals",
+        "Rebuilt GA4 tracking end to end",
+        "Ran the full social media presence and content strategy",
+        "Automated email outreach and the founder's personal content",
+        "A growth engine built on one framework:",
       ],
+      framework: ["Ascend", "Aware", "Engage", "Subscribe", "Convert", "Excite"],
     },
     {
       n: "03",
@@ -63,12 +69,12 @@ export const elevato = {
   ],
 };
 
-export const toolkit = {
-  intro: "Six things I've built beyond Elevato.",
+export const systems = {
+  title: "Systems I've built",
+  intro: "Automation, data and tools: what I build when a process should run itself.",
   items: [
     {
       n: "01",
-      art: "n8n",
       title: "AI content agent",
       client: "B2B tech client",
       tags: "Automation",
@@ -76,7 +82,6 @@ export const toolkit = {
     },
     {
       n: "02",
-      art: "/10",
       title: "Lead-scoring engine",
       client: "Drone startup · Python",
       tags: "Data · Automation",
@@ -84,7 +89,6 @@ export const toolkit = {
     },
     {
       n: "03",
-      art: "BI",
       title: "Self-updating ops dashboard",
       client: "GCC consultancy · Power BI",
       tags: "Data",
@@ -92,7 +96,6 @@ export const toolkit = {
     },
     {
       n: "04",
-      art: "Aa",
       title: "Founder content workflow",
       client: "Founder personal brand · n8n",
       tags: "Automation · Content",
@@ -100,23 +103,30 @@ export const toolkit = {
     },
     {
       n: "05",
-      image: "/images/elevato-poster-1.jpg",
-      imageAlt: "Elevato launch poster: why get regular shoes when you can get shoes that make you taller?",
-      title: "Elevato launch creative",
-      client: "Elevato · D2C footwear",
-      tags: "Content · Growth",
-      outcome: "Launch poster, product-drop poster and a subway ad concept.",
-    },
-    {
-      n: "06",
-      art: "Rank",
       title: "Startup culture scorer",
       client: "Own build",
       tags: "Tools · Data",
       outcome: "Pulls workplace reviews from several sources and scores them into one report.",
     },
+    {
+      n: "06",
+      title: "AI Job Scout",
+      client: "Own build",
+      tags: "Automation · In progress",
+      outcome: "Currently building.",
+    },
   ],
-  alsoBuilding: "AI Job Scout — in progress",
+};
+
+// Creative made for Elevato. Add more by dropping images into /public/images and listing them here.
+export const campaign = {
+  title: "The campaign",
+  intro: "Creative I made for Elevato's relaunch.",
+  items: [
+    { src: "/images/elevato-poster-1.jpg", w: 1122, h: 1402, alt: "Launch poster: why get regular shoes when you can get shoes that make you taller?", caption: "Launch poster" },
+    { src: "/images/elevato-subway.jpg", w: 1254, h: 1254, alt: "Subway ad concept: a commuter reads a newspaper headlined Shoes to make you taller?", caption: "Subway ad concept" },
+    { src: "/images/elevato-poster-2.jpg", w: 1122, h: 1402, alt: "Product drop poster: first collection after relaunch just dropped", caption: "Product drop poster" },
+  ],
 };
 
 export const index = {
@@ -157,11 +167,12 @@ export const footer = {
   ],
 };
 
-// Order matters: the Space key steps through these, and the menu lists the last four.
+// The menu lists these, after "Top".
 export const sections = [
   { id: "top", label: "Top" },
   { id: "elevato", label: "Elevato" },
-  { id: "toolkit", label: "Toolkit" },
+  { id: "campaign", label: "Campaign" },
+  { id: "systems", label: "Systems" },
   { id: "index", label: "Index" },
   { id: "contact", label: "Contact" },
 ];

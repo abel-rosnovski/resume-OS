@@ -7,6 +7,7 @@ export default function ElevatoStory() {
       <div className="stick">
         <div className="story-kicker label mute">{elevato.kicker}</div>
 
+        <div className="panels">
         <article className="panel">
           <div className="label mute">
             {brief.n} — {brief.tab}
@@ -28,14 +29,26 @@ export default function ElevatoStory() {
             <br />
             {build.title[1]}
           </h2>
-          <ul className="build-list">
+          <ol className="build-list">
             {build.list.map((item, i) => (
               <li key={item}>
                 <span className="label mute">{String(i + 1).padStart(2, "0")}</span>
-                {item}
+                <span>
+                  {item}
+                  {i === build.list.length - 1 ? (
+                    <span className="framework label">
+                      {build.framework.map((f, k) => (
+                        <span key={f}>
+                          {k ? <i aria-hidden="true">→</i> : null}
+                          {f}
+                        </span>
+                      ))}
+                    </span>
+                  ) : null}
+                </span>
               </li>
             ))}
-          </ul>
+          </ol>
         </article>
 
         <article className="panel">
@@ -53,6 +66,7 @@ export default function ElevatoStory() {
             ))}
           </div>
         </article>
+        </div>
 
         <div className="tabs label" aria-hidden="true">
           {elevato.panels.map((p) => (

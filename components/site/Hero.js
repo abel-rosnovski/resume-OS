@@ -22,14 +22,14 @@ export default function Hero() {
       <div className="hero-metric fade" style={{ "--d": "950ms" }}>
         <b>{heroMetric.value}</b>
         <span className="label mute">{heroMetric.label}</span>
-      </div>
-
-      <div className="hero-status label fade" style={{ "--d": "1100ms" }}>
-        <span className="dot" aria-hidden="true" />
-        {person.status}
-      </div>
-      <div className="hero-scroll label mute fade" style={{ "--d": "1200ms" }} aria-hidden="true">
-        <span className="skim-hint">Scroll, or press Space to skim</span>
+        <dl className="hero-more">
+          {heroMetric.more.map((m) => (
+            <div key={m.label}>
+              <dt className="label mute">{m.label}</dt>
+              <dd>{m.value}</dd>
+            </div>
+          ))}
+        </dl>
       </div>
 
       <h1 className="wordmark" aria-label={person.name}>
