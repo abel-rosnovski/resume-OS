@@ -172,8 +172,8 @@ export const footer = {
 export const sections = [
   { id: "top", label: "Top" },
   { id: "elevato", label: "Elevato" },
-  { id: "campaign", label: "Campaign" },
   { id: "systems", label: "Systems" },
+  { id: "campaign", label: "Campaign" },
   { id: "index", label: "Index" },
   { id: "contact", label: "Contact" },
 ];

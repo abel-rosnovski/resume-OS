@@ -26,7 +26,7 @@ export default function Motion() {
       const el = document.getElementById(id);
       return el ? el.getBoundingClientRect().top + window.scrollY : 0;
     };
-    // Stops: top → Elevato brief → build → result → Campaign → Systems → Index → Contact → top.
+    // Stops: top → Elevato brief → build → result → Systems → Campaign → Index → Contact → top.
     const stops = () => {
       const vh = window.innerHeight;
       const story = document.getElementById("elevato");
@@ -36,8 +36,8 @@ export default function Motion() {
         0,
         top("elevato") + (pinned ? run * 0.2 : 0),
         ...(pinned ? [top("elevato") + run * 0.53, top("elevato") + run * 0.86] : []),
-        top("campaign"),
         top("systems"),
+        top("campaign"),
         top("index"),
         top("contact"),
       ];

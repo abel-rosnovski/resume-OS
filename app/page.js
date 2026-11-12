@@ -18,8 +18,8 @@ export default function Home() {
           <Hero />
           <ElevatoStory />
         </Stage>
-        <Campaign />
         <Systems />
+        <Campaign />
         <IndexSection />
         <Notes />
       </main>
